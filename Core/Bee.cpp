@@ -12,3 +12,18 @@
  * Attacks the ant in the space to the left until the ant dies or bee dies
  * 
  */
+
+#include <string>
+#include <iostream>
+
+#include "Bee.h"
+
+Bee::Bee(){
+
+    armor = 3;
+    health = 3;
+
+    alive = true;
+    attacked = false;
+    position = 10;
+}
