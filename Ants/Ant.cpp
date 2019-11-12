@@ -7,3 +7,10 @@
  * 
  * Ants protect the queen ant, far left, from the spawning bees, far right.
  */
+
+#include "Ant.h"
+
+Ant::Ant(){
+    
+    alive = true;
+}
