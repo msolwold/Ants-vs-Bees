@@ -4,6 +4,9 @@
  * Parent: Ant
  */
 
+#ifndef ANT_FIRE_H
+#define ANT_FIRE_H
+
 #include "Ant.h"
 
 class Ant_Fire: public Ant {
@@ -27,3 +30,5 @@ class Ant_Fire: public Ant {
         std::string type;
 
 };
+
+#endif

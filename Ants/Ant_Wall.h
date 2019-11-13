@@ -4,6 +4,9 @@
  * Parent: Ant
  */
 
+#ifndef ANT_WALL_H
+#define ANT_WALL_H
+
 #include "Ant.h"
 
 class Ant_Wall: public Ant {
@@ -27,3 +30,5 @@ class Ant_Wall: public Ant {
         std::string type;
 
 };
+
+#endif

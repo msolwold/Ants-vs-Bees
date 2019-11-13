@@ -4,10 +4,12 @@
  *
  */
 
+#ifndef ANT_THROWER_H
+#define ANT_THROWER_H
+
 #include <string>
 #include <iostream>
 
-#include "../Ant.h"
 #include "Throwers.h"
 
 class Ant_Thrower: public Throwers {
@@ -28,3 +30,5 @@ class Ant_Thrower: public Throwers {
     private:
 
 };
+
+#endif

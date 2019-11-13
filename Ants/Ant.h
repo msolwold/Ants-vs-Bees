@@ -6,6 +6,9 @@
  * Children: Throwers, Harvester, Fire, Wall, Ninja, Bodyguard
  */
 
+#ifndef ANT_H
+#define ANT_H
+
 #include <string>
 #include <iostream>
 
@@ -53,3 +56,5 @@ class Ant {
         bool alive;
 
 };
+
+#endif

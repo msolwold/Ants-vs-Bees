@@ -4,6 +4,9 @@
  * Parent: Ant
  */
 
+#ifndef ANT_NINJA
+#define ANT_NINJA
+
 #include "Ant.h"
 
 class Ant_Ninja: public Ant {
@@ -27,3 +30,5 @@ class Ant_Ninja: public Ant {
         std::string type;
 
 };
+
+#endif

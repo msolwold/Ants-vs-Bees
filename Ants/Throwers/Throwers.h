@@ -6,6 +6,9 @@
  * Children: Thrower, Long Thrower, Short Thrower
  */
 
+#ifndef THROWERS_H
+#define THROWERS_H
+
 #include <string>
 #include <iostream>
 
@@ -46,3 +49,5 @@ class Throwers: public Ant {
         bool attacked;
 
 };
+
+#endif

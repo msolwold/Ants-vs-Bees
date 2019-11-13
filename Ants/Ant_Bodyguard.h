@@ -4,6 +4,9 @@
  * Parent: Ant
  */
 
+#ifndef ANT_BODYGUARD_H
+#define ANT_BODYGUARD_H
+
 #include "Ant.h"
 
 class Ant_Bodyguard: public Ant {
@@ -27,3 +30,5 @@ class Ant_Bodyguard: public Ant {
         std::string type;
 
 };
+
+#endif

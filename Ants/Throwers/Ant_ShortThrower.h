@@ -4,10 +4,12 @@
  * 
  */
 
+#ifndef ANT_SHORTTHROWER_H
+#define ANT_SHORTTHROWER_H
+
 #include <string>
 #include <iostream>
 
-#include "../Ant.h"
 #include "Throwers.h"
 
 class Ant_ShortThrower: public Throwers {
@@ -30,3 +32,5 @@ class Ant_ShortThrower: public Throwers {
         std::string type();
 
 };
+
+#endif
