@@ -11,6 +11,8 @@
  * Can only move if space does not contain a blocking ant*
  * Attacks the ant in the space to the left until the ant dies or bee dies
  * 
+ * TODO: Destructor
+ * 
  */
 
 #include <string>
