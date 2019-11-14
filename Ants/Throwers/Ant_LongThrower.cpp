@@ -25,3 +25,7 @@ Ant_LongThrower::Ant_LongThrower(){
     Throwers::min_range = 4;
     Throwers::max_range = 10;
 }
+
+Ant_LongThrower * Ant_LongThrower::clone() const {
+    return new Ant_LongThrower(*this);
+}

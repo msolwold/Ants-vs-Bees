@@ -19,12 +19,14 @@ class Ant_ShortThrower: public Throwers {
         // * Constructor
 
         Ant_ShortThrower();
-        
+
+        virtual Ant_ShortThrower * clone() const;
+
         // * Destructor
 
         ~Ant_ShortThrower();
 
-        virtual void print_ant_action() const;
+        virtual std::string get_ant_action() const;
         virtual std::string ant_type() const;
 
     private:

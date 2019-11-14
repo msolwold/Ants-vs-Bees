@@ -18,11 +18,13 @@ class Ant_Ninja: public Ant {
 
         Ant_Ninja();
 
+        virtual Ant_Ninja * clone() const;
+
         // * Destructor
 
         ~Ant_Ninja();
 
-        virtual void print_ant_action() const;
+        virtual std::string get_ant_action() const;
         virtual std::string ant_type() const;
 
     private:

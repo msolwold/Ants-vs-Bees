@@ -18,11 +18,13 @@ class Ant_Fire: public Ant {
 
         Ant_Fire();
 
+        virtual Ant_Fire * clone() const;
+
         // * Destructor
 
         ~Ant_Fire();
 
-        virtual void print_ant_action() const;
+        virtual std::string get_ant_action() const;
         virtual std::string ant_type() const;
 
     private:

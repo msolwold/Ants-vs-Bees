@@ -15,10 +15,21 @@
 class Ant {
 
     public:
+
+        // * Constructor
+
+        Ant();
+        Ant(const Ant &a);
+
+        virtual Ant * clone() const = 0;
+
+        // * Destructor
+
+        ~Ant();
         
         // * Accessors
 
-        virtual void print_ant_action() const = 0;
+        virtual std::string get_ant_action() const = 0;
         std::string get_ant_type() const;
         int get_ant_health() const;
         int get_ant_armor() const;

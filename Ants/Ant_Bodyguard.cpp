@@ -25,3 +25,7 @@ Ant_Bodyguard::Ant_Bodyguard(){
     Ant::attacker = false;
     Ant::blocking = true;
 }
+
+Ant_Bodyguard * Ant_Bodyguard::clone() const { 
+    return new Ant_Bodyguard(*this);
+}

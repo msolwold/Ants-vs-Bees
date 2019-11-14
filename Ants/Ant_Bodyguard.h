@@ -18,11 +18,13 @@ class Ant_Bodyguard: public Ant {
 
         Ant_Bodyguard();
 
+        virtual Ant_Bodyguard * clone() const;
+
         // * Destructor
 
         ~Ant_Bodyguard();
 
-        virtual void print_ant_action() const;
+        virtual std::string get_ant_action() const;
         virtual std::string ant_type() const;
 
     private:

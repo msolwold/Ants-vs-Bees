@@ -14,3 +14,15 @@ Ant::Ant(){
     
     alive = true;
 }
+
+Ant::Ant(const Ant &a) {
+
+    Ant::ant_type = a.ant_type;
+    Ant::armor = a.armor;
+    Ant::health = a.health;
+    Ant::cost = a.cost;
+    Ant::blocking = a.blocking;
+    Ant::proactive = a.proactive;
+    Ant::attacker = a.attacker;
+    Ant::alive = a.alive;
+}

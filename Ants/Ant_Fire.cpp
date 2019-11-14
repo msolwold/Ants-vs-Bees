@@ -25,3 +25,7 @@ Ant_Fire::Ant_Fire(){
     Ant::attacker = false;
     Ant::blocking = true;
 }
+
+Ant_Fire * Ant_Fire::clone() const { 
+    return new Ant_Fire(*this);
+}

@@ -18,11 +18,13 @@ class Ant_Wall: public Ant {
 
         Ant_Wall();
 
+        virtual Ant_Wall * clone() const;
+
         // * Destructor
 
         ~Ant_Wall();
 
-        virtual void print_ant_action() const;
+        virtual std::string get_ant_action() const;
         virtual std::string ant_type() const;
 
     private:

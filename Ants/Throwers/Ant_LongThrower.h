@@ -20,11 +20,13 @@ class Ant_LongThrower: public Throwers {
 
         Ant_LongThrower();
 
+        virtual Ant_LongThrower * clone() const;
+
         // * Destructors
 
         ~Ant_LongThrower();
 
-        virtual void print_ant_action() const;
+        virtual std::string get_ant_action() const;
         virtual std::string ant_type() const;
 
     private:

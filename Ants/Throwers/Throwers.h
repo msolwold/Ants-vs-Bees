@@ -22,6 +22,9 @@ class Throwers: public Ant {
         // * Constructors
 
         Throwers();
+        Throwers(const Throwers &a);
+
+        virtual Ant * clone() const = 0;
         
         // * Destructor
 
@@ -29,7 +32,7 @@ class Throwers: public Ant {
 
         // * Accessors
 
-        virtual void print_ant_action() const = 0;
+        virtual std::string get_ant_action() const = 0;
         virtual std::string ant_type() const = 0;
 
         virtual int get_min_range() const;

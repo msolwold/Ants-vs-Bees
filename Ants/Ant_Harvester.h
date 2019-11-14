@@ -18,11 +18,13 @@ class Ant_Harvester: public Ant {
 
         Ant_Harvester();
 
+        virtual Ant_Harvester * clone() const;
+
         // * Destructor
 
         ~Ant_Harvester();
 
-        virtual void print_ant_action() const;
+        virtual std::string get_ant_action() const;
         virtual std::string ant_type() const;
 
     private:

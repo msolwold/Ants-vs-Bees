@@ -25,3 +25,8 @@ Ant_Thrower::Ant_Thrower(){
     Throwers::min_range = 0;
     Throwers::max_range = 0;
 }
+
+
+Ant_Thrower * Ant_Thrower::clone() const {
+    return new Ant_Thrower(*this);
+}

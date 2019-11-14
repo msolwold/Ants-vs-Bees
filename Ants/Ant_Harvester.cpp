@@ -26,3 +26,7 @@ Ant_Harvester::Ant_Harvester(){
     Ant::attacker = false;
     Ant::blocking = true;
 }
+
+Ant_Harvester * Ant_Harvester::clone() const {
+    return new Ant_Harvester(*this);
+}

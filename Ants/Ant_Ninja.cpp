@@ -25,3 +25,7 @@ Ant_Ninja::Ant_Ninja(){
     Ant::attacker = true;
     Ant::blocking = false;
 }
+
+Ant_Ninja * Ant_Ninja::clone() const {
+    return new Ant_Ninja(*this);
+}

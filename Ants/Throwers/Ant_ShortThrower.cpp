@@ -25,3 +25,7 @@ Ant_ShortThrower::Ant_ShortThrower(){
     Throwers::min_range = 0;
     Throwers::max_range = 2;
 }
+
+Ant_ShortThrower * Ant_ShortThrower::clone() const {
+    return new Ant_ShortThrower(*this);
+}

@@ -25,3 +25,7 @@ Ant_Wall::Ant_Wall(){
     Ant::attacker = false;
     Ant::blocking = true;
 }
+
+Ant_Wall * Ant_Wall::clone() const {
+    return new Ant_Wall(*this);
+}
