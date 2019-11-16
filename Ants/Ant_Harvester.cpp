@@ -16,8 +16,8 @@
 
 using namespace std;
 
-Ant_Harvester::Ant_Harvester(){
-
+Ant_Harvester::Ant_Harvester()
+{
     Ant::ant_type = "Harvester";
     Ant::armor = 1;
     Ant::health = armor;
@@ -27,6 +27,7 @@ Ant_Harvester::Ant_Harvester(){
     Ant::blocking = true;
 }
 
-Ant_Harvester * Ant_Harvester::clone() const {
+Ant_Harvester *Ant_Harvester::clone() const
+{
     return new Ant_Harvester(*this);
 }

@@ -15,8 +15,8 @@
 
 using namespace std;
 
-Ant_Bodyguard::Ant_Bodyguard(){
-
+Ant_Bodyguard::Ant_Bodyguard()
+{
     Ant::ant_type = "Bodyguard";
     Ant::armor = 2;
     Ant::health = armor;
@@ -26,6 +26,7 @@ Ant_Bodyguard::Ant_Bodyguard(){
     Ant::blocking = true;
 }
 
-Ant_Bodyguard * Ant_Bodyguard::clone() const { 
+Ant_Bodyguard *Ant_Bodyguard::clone() const
+{
     return new Ant_Bodyguard(*this);
 }

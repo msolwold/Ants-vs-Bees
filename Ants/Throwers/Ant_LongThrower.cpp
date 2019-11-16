@@ -15,8 +15,8 @@
 
 using namespace std;
 
-Ant_LongThrower::Ant_LongThrower(){
-
+Ant_LongThrower::Ant_LongThrower()
+{
     Ant::ant_type = "LongThrower";
     Ant::armor = 1;
     Ant::health = armor;
@@ -26,6 +26,7 @@ Ant_LongThrower::Ant_LongThrower(){
     Throwers::max_range = 10;
 }
 
-Ant_LongThrower * Ant_LongThrower::clone() const {
+Ant_LongThrower *Ant_LongThrower::clone() const
+{
     return new Ant_LongThrower(*this);
 }

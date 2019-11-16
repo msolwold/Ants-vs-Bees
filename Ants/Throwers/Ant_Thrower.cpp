@@ -15,8 +15,8 @@
 
 using namespace std;
 
-Ant_Thrower::Ant_Thrower(){
-
+Ant_Thrower::Ant_Thrower()
+{
     Ant::ant_type = "Thrower";
     Ant::armor = 1;
     Ant::health = armor;
@@ -26,7 +26,7 @@ Ant_Thrower::Ant_Thrower(){
     Throwers::max_range = 0;
 }
 
-
-Ant_Thrower * Ant_Thrower::clone() const {
+Ant_Thrower *Ant_Thrower::clone() const
+{
     return new Ant_Thrower(*this);
 }

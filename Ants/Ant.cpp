@@ -10,13 +10,13 @@
 
 #include "Ant.h"
 
-Ant::Ant(){
-    
+Ant::Ant()
+{
     alive = true;
 }
 
-Ant::Ant(const Ant &a) {
-
+Ant::Ant(const Ant &a)
+{
     Ant::ant_type = a.ant_type;
     Ant::armor = a.armor;
     Ant::health = a.health;

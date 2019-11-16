@@ -12,27 +12,25 @@
 
 #include "Throwers.h"
 
-class Ant_ShortThrower: public Throwers {
+class Ant_ShortThrower : public Throwers
+{
 
-    public:
+public:
+    // * Constructor
 
-        // * Constructor
+    Ant_ShortThrower();
 
-        Ant_ShortThrower();
+    virtual Ant_ShortThrower *clone() const;
 
-        virtual Ant_ShortThrower * clone() const;
+    // * Destructor
 
-        // * Destructor
+    ~Ant_ShortThrower();
 
-        ~Ant_ShortThrower();
+    virtual std::string get_ant_action() const;
+    virtual std::string ant_type() const;
 
-        virtual std::string get_ant_action() const;
-        virtual std::string ant_type() const;
-
-    private:
-
-        std::string type();
-
+private:
+    std::string type();
 };
 
 #endif

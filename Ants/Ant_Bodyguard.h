@@ -9,28 +9,25 @@
 
 #include "Ant.h"
 
-class Ant_Bodyguard: public Ant {
+class Ant_Bodyguard : public Ant
+{
 
+public:
+    // * Constructor
 
-    public:
+    Ant_Bodyguard();
 
-        // * Constructor
+    virtual Ant_Bodyguard *clone() const;
 
-        Ant_Bodyguard();
+    // * Destructor
 
-        virtual Ant_Bodyguard * clone() const;
+    ~Ant_Bodyguard();
 
-        // * Destructor
+    virtual std::string get_ant_action() const;
+    virtual std::string ant_type() const;
 
-        ~Ant_Bodyguard();
-
-        virtual std::string get_ant_action() const;
-        virtual std::string ant_type() const;
-
-    private:
-
-        std::string type;
-
+private:
+    std::string type;
 };
 
 #endif

@@ -15,8 +15,8 @@
 
 using namespace std;
 
-Ant_Wall::Ant_Wall(){
-
+Ant_Wall::Ant_Wall()
+{
     Ant::ant_type = "Wall";
     Ant::armor = 4;
     Ant::health = armor;
@@ -26,6 +26,7 @@ Ant_Wall::Ant_Wall(){
     Ant::blocking = true;
 }
 
-Ant_Wall * Ant_Wall::clone() const {
+Ant_Wall *Ant_Wall::clone() const
+{
     return new Ant_Wall(*this);
 }

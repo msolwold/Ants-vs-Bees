@@ -20,7 +20,8 @@
 
 #include "Bee.h"
 
-Bee::Bee(){
+Bee::Bee()
+{
 
     armor = 3;
     health = 3;

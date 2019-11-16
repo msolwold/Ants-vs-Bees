@@ -15,8 +15,8 @@
 
 using namespace std;
 
-Ant_ShortThrower::Ant_ShortThrower(){
-
+Ant_ShortThrower::Ant_ShortThrower()
+{
     Ant::ant_type = "ShortThrower";
     Ant::armor = 1;
     Ant::health = armor;
@@ -26,6 +26,7 @@ Ant_ShortThrower::Ant_ShortThrower(){
     Throwers::max_range = 2;
 }
 
-Ant_ShortThrower * Ant_ShortThrower::clone() const {
+Ant_ShortThrower *Ant_ShortThrower::clone() const
+{
     return new Ant_ShortThrower(*this);
 }

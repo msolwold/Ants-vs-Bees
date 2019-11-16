@@ -9,28 +9,25 @@
 
 #include "Ant.h"
 
-class Ant_Wall: public Ant {
+class Ant_Wall : public Ant
+{
 
+public:
+    // * Constructor
 
-    public:
+    Ant_Wall();
 
-        // * Constructor
+    virtual Ant_Wall *clone() const;
 
-        Ant_Wall();
+    // * Destructor
 
-        virtual Ant_Wall * clone() const;
+    ~Ant_Wall();
 
-        // * Destructor
+    virtual std::string get_ant_action() const;
+    virtual std::string ant_type() const;
 
-        ~Ant_Wall();
-
-        virtual std::string get_ant_action() const;
-        virtual std::string ant_type() const;
-
-    private:
-
-        std::string type;
-
+private:
+    std::string type;
 };
 
 #endif

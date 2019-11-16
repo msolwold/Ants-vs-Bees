@@ -15,8 +15,8 @@
 
 using namespace std;
 
-Ant_Ninja::Ant_Ninja(){
-
+Ant_Ninja::Ant_Ninja()
+{
     Ant::ant_type = "Ninja";
     Ant::armor = 1;
     Ant::health = armor;
@@ -26,6 +26,7 @@ Ant_Ninja::Ant_Ninja(){
     Ant::blocking = false;
 }
 
-Ant_Ninja * Ant_Ninja::clone() const {
+Ant_Ninja *Ant_Ninja::clone() const
+{
     return new Ant_Ninja(*this);
 }

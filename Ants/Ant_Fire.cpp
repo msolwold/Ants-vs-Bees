@@ -6,7 +6,7 @@
  * 
  * Action: On death kills all bees in its square
  * 
- */ 
+ */
 
 #include <string>
 #include <iostream>
@@ -15,8 +15,8 @@
 
 using namespace std;
 
-Ant_Fire::Ant_Fire(){
-
+Ant_Fire::Ant_Fire()
+{
     Ant::ant_type = "Fire";
     Ant::armor = 1;
     Ant::health = armor;
@@ -26,6 +26,7 @@ Ant_Fire::Ant_Fire(){
     Ant::blocking = true;
 }
 
-Ant_Fire * Ant_Fire::clone() const { 
+Ant_Fire *Ant_Fire::clone() const
+{
     return new Ant_Fire(*this);
 }

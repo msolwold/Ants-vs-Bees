@@ -6,47 +6,44 @@
 #ifndef BEE_H
 #define BEE_H
 
-class Bee {
+class Bee
+{
 
-    public:
+public:
+    // * Constructors
 
-        // * Constructors
+    Bee();
 
-        Bee();
+    // * Destructor
 
-        // * Destructor
+    ~Bee();
 
-        ~Bee();
+    // * Accessors
 
-        // * Accessors
-        
-        int get_bee_health();
-        int get_bee_armor() const;
-        bool isAlive() const;
+    int get_bee_health();
+    int get_bee_armor() const;
+    bool isAlive() const;
 
-        int get_bee_position() const;
-        bool hasAttacked() const;
+    int get_bee_position() const;
+    bool hasAttacked() const;
 
-        // * Mutators
+    // * Mutators
 
-        void set_bee_positon(int index);
-        bool move();                    // Try to move bee
-        void refresh_bee();             // Reset the attacked flag
-        
-        bool damage(int damage);        // ! taking an int for fire ant
+    void set_bee_positon(int index);
+    bool move();        // Try to move bee
+    void refresh_bee(); // Reset the attacked flag
 
-    private:
+    bool damage(int damage); // ! taking an int for fire ant
 
-        int health;
-        int armor;
-        bool alive;
+private:
+    int health;
+    int armor;
+    bool alive;
 
-        int position;
-        bool attacked;
+    int position;
+    bool attacked;
 
-        // * Helpers
-
-
+    // * Helpers
 };
 
 #endif

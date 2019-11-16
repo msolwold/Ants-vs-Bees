@@ -9,28 +9,25 @@
 
 #include "Ant.h"
 
-class Ant_Harvester: public Ant {
+class Ant_Harvester : public Ant
+{
 
+public:
+    // * Constructor
 
-    public:
+    Ant_Harvester();
 
-        // * Constructor
+    virtual Ant_Harvester *clone() const;
 
-        Ant_Harvester();
+    // * Destructor
 
-        virtual Ant_Harvester * clone() const;
+    ~Ant_Harvester();
 
-        // * Destructor
+    virtual std::string get_ant_action() const;
+    virtual std::string ant_type() const;
 
-        ~Ant_Harvester();
-
-        virtual std::string get_ant_action() const;
-        virtual std::string ant_type() const;
-
-    private:
-
-        std::string type;
-
+private:
+    std::string type;
 };
 
 #endif

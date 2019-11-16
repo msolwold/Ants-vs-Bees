@@ -14,43 +14,40 @@
 
 #include "Ant.h"
 
-class Throwers: public Ant {
+class Throwers : public Ant
+{
 
+public:
+    // * Constructors
 
-    public:
+    Throwers();
+    Throwers(const Throwers &a);
 
-        // * Constructors
+    virtual Ant *clone() const = 0;
 
-        Throwers();
-        Throwers(const Throwers &a);
+    // * Destructor
 
-        virtual Ant * clone() const = 0;
-        
-        // * Destructor
+    ~Throwers();
 
-        ~Throwers();
+    // * Accessors
 
-        // * Accessors
+    virtual std::string get_ant_action() const = 0;
+    virtual std::string ant_type() const = 0;
 
-        virtual std::string get_ant_action() const = 0;
-        virtual std::string ant_type() const = 0;
+    virtual int get_min_range() const;
+    virtual int get_max_range() const;
+    virtual bool hasAttacked() const;
 
-        virtual int get_min_range() const;
-        virtual int get_max_range() const;
-        virtual bool hasAttacked() const;
+    // * Mutators
 
-        // * Mutators
+    virtual void attack();
+    virtual void refresh_ant();
 
-        virtual void attack();
-        virtual void refresh_ant();
+protected:
+    int min_range;
+    int max_range;
 
-    protected:
-
-        int min_range;
-        int max_range;
-
-        bool attacked;
-
+    bool attacked;
 };
 
 #endif

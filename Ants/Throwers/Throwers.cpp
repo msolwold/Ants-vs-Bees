@@ -7,8 +7,8 @@
 
 #include "Throwers.h"
 
-Throwers::Throwers(){
-
+Throwers::Throwers()
+{
     attacked = false;
 
     Ant::blocking = true;
@@ -16,8 +16,8 @@ Throwers::Throwers(){
     Ant::proactive = true;
 }
 
-Throwers::Throwers(const Throwers &a){
-
+Throwers::Throwers(const Throwers &a)
+{
     Throwers::min_range = a.min_range;
     Throwers::max_range = a.max_range;
     Throwers::attacked = a.attacked;
