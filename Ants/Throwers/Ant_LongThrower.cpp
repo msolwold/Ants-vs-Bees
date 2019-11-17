@@ -16,14 +16,14 @@
 using namespace std;
 
 Ant_LongThrower::Ant_LongThrower()
-{
+{ 
     Ant::ant_type = "LongThrower";
     Ant::armor = 1;
     Ant::health = armor;
     Ant::cost = 3;
 
     Throwers::min_range = 4;
-    Throwers::max_range = 10;
+    Throwers::max_range = 1000;
 }
 
 Ant_LongThrower *Ant_LongThrower::clone() const

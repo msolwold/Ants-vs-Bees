@@ -14,6 +14,8 @@
 
 #include "Ant.h"
 
+class Board;
+
 class Throwers : public Ant
 {
 
@@ -40,7 +42,7 @@ public:
 
     // * Mutators
 
-    virtual void attack();
+    virtual void attack(Board * b);
     virtual void refresh_ant();
 
 protected:
