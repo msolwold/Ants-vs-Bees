@@ -1,6 +1,5 @@
 /**
  * Player Class
- * 
  */
 
 #ifndef PLAYER_H
@@ -21,13 +20,12 @@ public:
 
     // * Destructor
 
-    ~Player();
+    ~Player(){}
 
     // * Accessors
 
-    int get_num_resources();
-    bool isAlive();
-    std::string get_player_name();
+    int get_num_resources() const;
+    std::string get_player_name() const;
 
     // * Mutators
     void set_player_name(std::string player_name);
@@ -35,14 +33,12 @@ public:
     void add_resources(int r);
     void sub_resources(int r);
 
+    void print_player_info(int num_harvesters) const;
+
 private:
     int resources;
 
-    bool queen_alive;
-
     std::string player_name;
-
-    // * Helpers
 };
 
 #endif
