@@ -1,6 +1,5 @@
 /**
- * Bee
- * 
+ * Bee Class
  */
 
 #ifndef BEE_H
@@ -16,11 +15,11 @@ public:
 
     // * Destructor
 
-    ~Bee();
+    //~Bee();
 
     // * Accessors
 
-    int get_bee_health();
+    int get_bee_health() const;
     int get_bee_armor() const;
     bool isAlive() const;
 
@@ -29,11 +28,11 @@ public:
 
     // * Mutators
 
-    void set_bee_positon(int index);
-    bool move();        // Try to move bee
-    void refresh_bee(); // Reset the attacked flag
+    void set_bee_position(int index);
+    void attack();
+    void refresh_bee();                 // Reset the attacked flag
 
-    bool damage(int damage); // ! taking an int for fire ant
+    bool damage(int damage = 1);        // taking an int for fire ant, 1 is default
 
 private:
     int health;
@@ -42,8 +41,6 @@ private:
 
     int position;
     bool attacked;
-
-    // * Helpers
 };
 
 #endif
