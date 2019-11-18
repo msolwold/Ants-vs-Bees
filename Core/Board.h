@@ -5,11 +5,14 @@
  * 
  */
 
+#ifndef BOARD_H
+#define BOARD_H
+
 #include <vector>
 #include <string>
 #include <iostream>
 
-#include "Ant.h"
+#include "../Ants/Ant.h"
 #include "Bee.h"
 
 class Board {
@@ -49,8 +52,9 @@ public:
     int get_board_size() const;
     Square * get_board() const;
 
-    int get_total_num_ants(); // !
-    int get_total_num_bees();
+    int get_total_num_ants() const;
+    int get_total_num_bees() const;
+    int get_total_num_harvesters() const;
 
     bool isBodyguard(int index) const;
     bool isAnt(int index) const;
@@ -76,8 +80,20 @@ public:
 
     // * Mutators
 
+    void refresh_square(int index);
+    int refresh_board();
+
     void place_ant(int index, Ant * a);         // Used during players turn
     void kill_bee(int board_index, Bee * b);    // Used by Throwers
+
+    // * Helpers
+
+    void print_board() const;
+    std::string print_border() const;
+    std::string print_ants(std::vector<Ant*>::iterator it, std::vector<Ant*>::iterator beginning) const;
+    std::string print_bees(std::vector<Bee*>::iterator it, std::vector<Bee*>::iterator end) const;
+    std::string print_inner_square(int index, int i) const;
+    
 
 private:
 
@@ -86,6 +102,7 @@ private:
 
     int total_num_ants;
     int total_num_bees;
+    int total_num_harvesters;
 
     bool queen_alive;
 
@@ -96,14 +113,16 @@ private:
     // * Turn Functions
 
     //*Ants
-    void remove_ant(int board_index, vector<Ant*>::iterator it);
+    void remove_ant(int board_index, std::vector<Ant*>::iterator it);
 
 
     //*Bees
     bool can_move_bee(int index, const Bee * b) const;    
-    bool move_bee(int board_index, vector<Bee*>::iterator it);
+    bool move_bee(int board_index, std::vector<Bee*>::iterator it);
     void kill_all_bees(int board_index);
 
-    void remove_bee(int board_index, vector<Bee*>::iterator it);
+    void remove_bee(int board_index, std::vector<Bee*>::iterator it);
     void add_bee(int board_index, Bee * b);
 };
+
+#endif
