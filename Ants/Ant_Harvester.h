@@ -21,13 +21,16 @@ public:
 
     // * Destructor
 
-    ~Ant_Harvester();
+    virtual ~Ant_Harvester(){}
+
+    // * Accessors
 
     virtual std::string get_ant_action() const;
-    virtual std::string ant_type() const;
+    virtual std::string get_ant_initials() const;
 
 private:
     std::string type;
+    bool generated_resource;
 };
 
 #endif

@@ -12,9 +12,8 @@
 #include <string>
 #include <iostream>
 
-#include "Ant.h"
-
-class Board;
+#include "../Ant.h"
+#include "../../Core/Board.h"
 
 class Throwers : public Ant
 {
@@ -25,16 +24,16 @@ public:
     Throwers();
     Throwers(const Throwers &a);
 
-    virtual Ant *clone() const = 0;
+    virtual Throwers *clone() const = 0;
 
     // * Destructor
 
-    ~Throwers();
+    virtual ~Throwers(){}
 
     // * Accessors
 
     virtual std::string get_ant_action() const = 0;
-    virtual std::string ant_type() const = 0;
+    virtual std::string get_ant_initials() const = 0;
 
     virtual int get_min_range() const;
     virtual int get_max_range() const;

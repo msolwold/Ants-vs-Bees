@@ -19,7 +19,7 @@ Ant_Fire::Ant_Fire()
 {
     Ant::ant_type = "Fire";
     Ant::armor = 1;
-    Ant::health = armor;
+    Ant::health = 1;
     Ant::cost = 4;
     Ant::proactive = false;
     Ant::attacker = false;
@@ -29,4 +29,24 @@ Ant_Fire::Ant_Fire()
 Ant_Fire *Ant_Fire::clone() const
 {
     return new Ant_Fire(*this);
+}
+
+/**
+ * Returns a string representing the action that the Ant has
+ * 
+ * @return string
+ */
+string Ant_Fire::get_ant_action() const 
+{
+    return "When this Ant is killed, all Bees that share the square will be killed with it.";
+}
+
+/**
+ * Returns the initials of the Ant
+ * 
+ * @return string
+ */
+string Ant_Fire::get_ant_initials() const
+{
+    return "f";
 }

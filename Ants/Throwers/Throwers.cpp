@@ -6,7 +6,8 @@
  */
 
 #include "Throwers.h"
-#include "../Core/Board.h"
+
+// * Constructors
 
 Throwers::Throwers()
 {
@@ -19,9 +20,49 @@ Throwers::Throwers()
 
 Throwers::Throwers(const Throwers &a)
 {
+    std::cout << "copying thrower" << std::endl;
+    Ant::ant_type = a.ant_type;
+    Ant::armor = a.armor;
+    Ant::health = 1;
+    Ant::cost = a.cost;
+    Ant::blocking = a.blocking;
+    Ant::proactive = a.proactive;
+    Ant::attacker = a.attacker;
     Throwers::min_range = a.min_range;
     Throwers::max_range = a.max_range;
     Throwers::attacked = a.attacked;
+}
+
+// * Accessors
+
+/**
+ * Returns the min attack range of the Ant
+ * 
+ * @return int
+ */
+int Throwers::get_min_range() const
+{
+    return min_range;
+}
+
+/**
+ * Returns the max attack range of the Ant
+ * 
+ * @return int
+ */
+int Throwers::get_max_range() const
+{
+    return max_range;
+}
+
+/**
+ * Returns true if the Ant has attacked this round
+ * 
+ * @return bool
+ */
+bool Throwers::hasAttacked() const 
+{
+    return attacked;
 }
 
 // * Mutators
@@ -53,4 +94,12 @@ void Throwers::attack(Board * b)
             break;
         }
     }
+}
+
+/**
+ * Refreshes the Ant. Sets the Attacked flag to false
+ */
+void Throwers::refresh_ant()
+{
+    attacked = false;
 }

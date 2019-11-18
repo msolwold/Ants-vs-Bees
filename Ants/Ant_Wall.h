@@ -21,10 +21,10 @@ public:
 
     // * Destructor
 
-    ~Ant_Wall();
+    virtual ~Ant_Wall(){}
 
     virtual std::string get_ant_action() const;
-    virtual std::string ant_type() const;
+    virtual std::string get_ant_initials() const;
 
 private:
     std::string type;

@@ -21,10 +21,10 @@ public:
 
     // * Destructor
 
-    ~Ant_Bodyguard();
+    virtual ~Ant_Bodyguard(){}
 
     virtual std::string get_ant_action() const;
-    virtual std::string ant_type() const;
+    virtual std::string get_ant_initials() const;
 
 private:
     std::string type;

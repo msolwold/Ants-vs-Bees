@@ -24,10 +24,10 @@ public:
 
     // * Destructor
 
-    ~Ant_ShortThrower();
+    virtual ~Ant_ShortThrower(){}
 
     virtual std::string get_ant_action() const;
-    virtual std::string ant_type() const;
+    virtual std::string get_ant_initials() const;
 
 private:
     std::string type();

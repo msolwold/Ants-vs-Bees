@@ -19,19 +19,19 @@ class Ant_Thrower: public Throwers {
         // * Constructors
         
         Ant_Thrower();
-        Ant_Thrower(const Ant_Thrower &a);
 
         virtual Ant_Thrower * clone() const;
 
         // * Destructor
 
-        ~Ant_Thrower();
+        //virtual ~Ant_Thrower(){}
 
         virtual std::string get_ant_action() const;
-        virtual std::string ant_type() const;
+        virtual std::string get_ant_initials() const;
 
     private:
 
 };
 
 #endif
+
